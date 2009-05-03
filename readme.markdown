@@ -1,8 +1,9 @@
 jQuery dropdownNav Plugin
 =============================
 
-jQuery Plugin that generates a Tab Navigation from Markup that makes sense without Javascript.
-The generated Tabs are the only ones out there that work for Screenreader users without support for WAI ARIA.
+jQuery Plugin that turns a regular form select element into a keyboard accessible navigation element.
+Inspired by http://www.themaninblue.com/experiment/AccessibleSelect/ which I found interesting but not
+really accessible as it came without a non-js fallback.
 
 Usage:
 ------
@@ -12,6 +13,5 @@ $(function() {
 
 See also
 --------
-* english info: http://blog.ginader.de/archives/2009/02/07/jQuery-Accessible-Tabs-How-to-make-tabs-REALLY-accessible.php
-* german info: http://blog.ginader.de/archives/2009/02/07/jQuery-Accessible-Tabs-Wie-man-Tabs-WIRKLICH-zugaenglich-macht.php
+* german info: http://blog.ginader.de/archives/2007/10/16/Barrierearmes-jQuery-Dropdown-Menue.php
 
