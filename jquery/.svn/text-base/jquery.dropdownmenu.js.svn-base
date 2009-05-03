@@ -1,0 +1,56 @@
+/**
+ * Dropdown Menu - jQuery plugin for accessible, unobtrusive Dropdown Menus based on Selectfields
+ * Inspired by http://www.themaninblue.com/experiment/AccessibleSelect/ which is nice but not working without Jsavascript
+ * @requires jQuery v1.0.3
+ * Usage:
+ * $("form").dropdownmenu();
+ *
+ * http://blog.ginader.de
+ *
+ * Copyright (c) 2007 Dirk Ginader (ginader.de)
+ * Dual licensed under the MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ *
+ * Version: 1.1
+ * CHANGELOG: 
+ * * 1.0 initial release
+ * * 1.1 added some missing semicolons so the script can be nicely compressed
+ */
+(function($) {
+	$.fn.dropdownmenu = function(settings) {
+		$(this).each(function() {
+			var f = $(this);
+			var s = f.find("select");
+			if(!s.activeIndex){
+				s[0].activeIndex = s[0].selectedIndex;
+				s[0].changed = false;
+			}
+			s.keydown(function(e){
+				var keyCodeTab = "9";
+				var keyCodeEnter = "13";
+				var keyCodeEsc = "27";
+				if(e.keyCode == keyCodeTab || e.keyCode == keyCodeEnter){
+					dropdownmenuonchange(this,f);
+				}
+				if(e.keyCode == keyCodeEsc){
+					this.selectedIndex = this.activeIndex;
+				}	
+			});
+			s.blur(function(e){
+				dropdownmenuonchange(this,f);
+			});
+			s.click(function(){
+				dropdownmenuonchange(this,f);
+			});
+			$(this).find("input[@type=submit]").remove();
+		});
+		return this;
+	};
+	dropdownmenuonchange = function(s,f){
+		if(s.selectedIndex != s.activeIndex && !s.changed){
+			s.changed = true;
+			f.submit();
+		}
+	};
+})(jQuery);

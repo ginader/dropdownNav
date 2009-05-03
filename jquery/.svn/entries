@@ -1,0 +1,52 @@
+8
+
+dir
+16
+http://dirk%40ginader.de@svn.devjavu.com/ginader/trunk/jquery/plugins/dropdownmenu/jquery
+http://dirk%40ginader.de@svn.devjavu.com/ginader
+
+
+
+2007-07-20T07:00:16.069851Z
+2
+dirk@ginader.de
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+ae00d9e1-4209-4fa5-ac5d-18561d3e18d0
+
+jquery.dropdownmenu.js
+file
+17
+
+
+
+2009-03-26T13:52:07.000000Z
+75388ce8e9c7d58c6ff94fd8fd01010e
+2009-03-26T13:53:28.966327Z
+17
+dirk@ginader.de
+
+jquery.js
+file
+
+
+
+
+2009-03-26T13:50:52.000000Z
+2d141ae55fa304237bfafe43a85a30df
+2007-07-20T07:00:16.069851Z
+2
+dirk@ginader.de
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Dropdown Menu Demo</title>
+		<script language="JavaScript" type="text/javascript" src="jquery/jquery.js"></script>
+		<script language="JavaScript" type="text/javascript" src="jquery/jquery.dropdownnav.js"></script>
+		<script type="text/javascript">			
+			if(window.location.search != '?noscript'){
+				$(function() {
+					$("form").dropdownNav();
+				});
+			}
+		</script>
+	</head>
+	
+	<body>
+		<p><a href="?">mit</a>/<a href="?noscript">ohne</a> Javascript </p>
+		<form action="index.htm" name="dropdownmenu1" method="get">
+			<fieldset>
+				<legend>
+					An example form
+				</legend>
+				<label for="selector">
+					An example select menu
+				</label>
+				<select id="selector" name="selector">
+					<option value="0">Select Option</option>
+					<option value="1">Option 1</option>
+					<option value="2">Option 2</option>
+					<option value="3">Option 3</option>
+					<option value="4">Option 4</option>
+				</select>
+				<input type="submit" name="submit" value="go" />
+			</fieldset>
+		</form>
+		<form action="index.htm" name="dropdownmenu2" method="get">
+			<fieldset>
+				<legend>
+					An example form
+				</legend>
+				<label for="selector2">
+					An example select menu
+				</label>
+				<select id="selector2" name="selector2">
+					<option value="0">Select Option</option>
+					<option value="5">Option 5</option>
+					<option value="6">Option 6</option>
+					<option value="7">Option 7</option>
+					<option value="8">Option 8</option>
+				</select>
+				<input type="submit" name="submit" value="go" />
+			</fieldset>
+		</form>
+</body>
+</html>
